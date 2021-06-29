@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
                             tv1.setLayoutParams(layoutParams);
                         }
                         else{
-                    tv1.setText("ABCDEFG");
+                    tv1.setText("");
                             tv1.setPadding(10,10,10,10);
                     tv1.setLayoutParams(layoutParams);
                     tv1.setBackgroundResource(R.drawable.shape2);}}
@@ -155,7 +155,7 @@ public class MainActivity extends AppCompatActivity {
                 if(i==0)
                 tv.setText("Column"+rowend);
                 else
-                    tv.setText("ABCDEFG");
+                    tv.setText("");
                 View view=tableLayout.getChildAt(i);
                 TableRow row=(TableRow)view;
                 row.addView(tv,rowend);
