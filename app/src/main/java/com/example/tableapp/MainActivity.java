@@ -159,12 +159,16 @@ public class MainActivity extends AppCompatActivity {
             btn2.setOnClickListener((View v)->{
                 for(int i=0;i<tableLayout.getChildCount()-1;i++){
                 TextView tv=new TextView(MainActivity.this);
-                tv.setLayoutParams(layoutParams);
-                tv.setBackgroundColor(getResources().getColor(R.color.purple_200));
-                if(i==0)
+                if(i==0){
                 tv.setText("Column"+rowend);
-                else
+                    tv.setLayoutParams(layoutParams);
+                tv.setBackgroundResource(R.drawable.shape);
+                    tv.setPadding(10,10,10,10);}
+                else{
                     tv.setText("");
+                    tv.setLayoutParams(layoutParams);
+                    tv.setBackgroundResource(R.drawable.shape2);
+                    tv.setPadding(10,10,10,10);}
                 View view=tableLayout.getChildAt(i);
                 TableRow row=(TableRow)view;
                 row.addView(tv,rowend);
